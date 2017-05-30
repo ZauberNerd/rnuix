@@ -8,15 +8,12 @@ import Touchable from '../../atoms/touchable';
 
 export type DemoHeaderProps = {
     onEnterFullScreen?: () => void,
-    onExitFullScreen?: () => void,
     title: string,
 };
 
 export default function DemoHeader(
     {
-        isFullScreen,
         onEnterFullScreen,
-        onExitFullScreen,
         title,
     }: DemoHeaderProps,
 ) {

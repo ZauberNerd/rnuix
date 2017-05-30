@@ -2,13 +2,16 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { colors } from '../../../themes';
-import DemoHeader from '../../molecules/demo-header';
+import { colors, mixins } from '../../../themes';
 import DemoRenderer from '../../atoms/demo-renderer';
-import type { DemoHeaderProps } from '../../molecules/demo-header';
+import DemoHeader from '../../molecules/demo-header';
+import FloatingButton from '../../molecules/floating-button';
 import type { DemoRendererProps } from '../../atoms/demo-renderer';
+import type { DemoHeaderProps } from '../../molecules/demo-header';
 
 export type DemoTileProps = DemoHeaderProps & DemoRendererProps & {
+    onExitFullScreen?: () => void,
+    hideHeader?: boolean,
     style?: StyleSheet.Style,
 };
 
@@ -16,6 +19,7 @@ export default function DemoTile(
     {
         render,
         isFullScreen = false,
+        hideHeader = false,
         onEnterFullScreen,
         onExitFullScreen,
         style,
@@ -25,10 +29,15 @@ export default function DemoTile(
     return (
         <View style={[isFullScreen ? null : styles.container, style]}>
             {isFullScreen
-                ? null
+                ? hideHeader
+                      ? <FloatingButton
+                            onPress={onExitFullScreen}
+                            style={styles.exitButton}
+                            name="close"
+                        />
+                      : null
                 : <DemoHeader
                       onEnterFullScreen={onEnterFullScreen}
-                      onExitFullScreen={onExitFullScreen}
                       title={title}
                   />}
             <DemoRenderer render={render} isFullScreen={isFullScreen} />
@@ -38,8 +47,13 @@ export default function DemoTile(
 
 const styles = StyleSheet.create({
     container: {
-        borderColor: colors.silverDark,
         borderRadius: 3,
-        borderWidth: 0.5,
+        ...mixins.elevation(2),
+    },
+    exitButton: {
+        position: 'absolute',
+        bottom: 20,
+        left: 20,
+        zIndex: 1,
     },
 });

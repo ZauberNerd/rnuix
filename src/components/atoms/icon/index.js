@@ -4,10 +4,11 @@ import { Image } from 'react-native';
 
 export type IconProps = {
     name: string,
+    tintColor?: string,
 };
 
-export default function Icon({ name }: IconProps) {
-    return <Image source={icons[name]} />;
+export default function Icon({ name, tintColor }: IconProps) {
+    return <Image source={icons[name]} style={{ tintColor }} />;
 }
 
 const icons = {

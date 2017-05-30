@@ -1,7 +1,8 @@
 // @flow
 import React from 'react';
-import { Text } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
+import { colors } from '../../../themes';
 import Touchable from './';
 
 export default {
@@ -25,20 +26,9 @@ export default {
                     onPress={() => {}}
                     activeOpacity={0.5}
                     rippleColor="#fff6"
-                    style={{
-                        backgroundColor: '#78c',
-                        borderRadius: 3,
-                        margin: 10,
-                        padding: 10,
-                    }}
+                    style={styles.customWrapper}
                 >
-                    <Text
-                        style={{
-                            color: '#fff',
-                            fontWeight: 'bold',
-                            textAlign: 'center',
-                        }}
-                    >
+                    <Text style={styles.customText}>
                         Touch me!
                     </Text>
                 </Touchable>
@@ -50,20 +40,9 @@ export default {
                 <Touchable
                     disabled
                     onPress={() => {}}
-                    style={{
-                        backgroundColor: '#78c',
-                        borderRadius: 3,
-                        margin: 10,
-                        padding: 10,
-                    }}
+                    style={styles.customWrapper}
                 >
-                    <Text
-                        style={{
-                            color: '#fff',
-                            fontWeight: 'bold',
-                            textAlign: 'center',
-                        }}
-                    >
+                    <Text style={styles.customText}>
                         Can't touch this
                     </Text>
                 </Touchable>
@@ -71,3 +50,17 @@ export default {
         },
     ],
 };
+
+const styles = StyleSheet.create({
+    customWrapper: {
+        backgroundColor: colors.blue,
+        borderRadius: 3,
+        margin: 10,
+        padding: 10,
+    },
+    customText: {
+        color: colors.white,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+});

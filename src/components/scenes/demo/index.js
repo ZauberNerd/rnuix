@@ -52,8 +52,6 @@ export default class Demo extends Component {
             render={props.render}
             onEnterFullScreen={() =>
                 this.props.navigation.navigate('fullScreen', props)}
-            onExitFullScreen={() =>
-                this.props.navigation.navigate('demo', props)}
         />
     );
 

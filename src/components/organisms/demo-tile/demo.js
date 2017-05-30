@@ -1,7 +1,8 @@
 // @flow
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
+import { colors, metrics } from '../../../themes';
 import DemoTile from './';
 
 export default {
@@ -24,6 +25,30 @@ export default {
                     render={() => <Text>Content</Text>}
                 />
             ),
+        },
+        {
+            title: 'Full screen mode without header',
+            render: () => (
+                <DemoTile
+                    title="title"
+                    isFullScreen
+                    render={() => (
+                        <View
+                            style={{
+                                width: metrics.window.width,
+                                height: metrics.window.height,
+                                borderColor: colors.gray,
+                                borderStyle: 'solid',
+                                borderWidth: 10,
+                                padding: 10,
+                            }}
+                        >
+                            <Text>Large content</Text>
+                        </View>
+                    )}
+                />
+            ),
+            hideHeader: true,
         },
     ],
 };

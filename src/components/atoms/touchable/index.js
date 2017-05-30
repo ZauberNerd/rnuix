@@ -35,7 +35,7 @@ function StyledTouchableNativeFeedback(
     );
 }
 
-type TouchableProps = typeof TouchableOpacity & StyledTouchableNativeFeedbackProps;
+export type TouchableProps = typeof TouchableOpacity & StyledTouchableNativeFeedbackProps;
 
 export default function Touchable(
     {
