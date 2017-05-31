@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { colors } from '../../../themes';
-import Icon from '../../atoms/icon';
 import FloatingButton from './';
 
 export default {

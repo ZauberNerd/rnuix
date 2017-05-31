@@ -16,7 +16,10 @@ export default function DemoRenderer(
     }: DemoRendererProps,
 ) {
     return (
-        <ScrollView style={isFullScreen ? styles.fullScreen : styles.tile}>
+        <ScrollView
+            style={isFullScreen && styles.fullScreen}
+            contentContainerStyle={!isFullScreen && styles.tile}
+        >
             {render()}
         </ScrollView>
     );

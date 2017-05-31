@@ -8,7 +8,7 @@ import type { IconProps } from '../../atoms/icon';
 
 export type FloatingButtonProps = typeof TouchableOpacity & IconProps;
 
-export default function ExitButton(
+export default function FloatingButton(
     { style, name, tintColor = colors.white, ...props }: FloatingButtonProps,
 ) {
     return (
