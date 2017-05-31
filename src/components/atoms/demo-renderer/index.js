@@ -16,27 +16,17 @@ export default function DemoRenderer(
     }: DemoRendererProps,
 ) {
     return (
-        <ScrollView
-            style={[
-                styles.demo,
-                isFullScreen ? styles.fullScreen : styles.tile,
-            ]}
-        >
+        <ScrollView style={isFullScreen ? styles.fullScreen : styles.tile}>
             {render()}
         </ScrollView>
     );
 }
 
 const styles = StyleSheet.create({
-    demo: {
-        backgroundColor: colors.white,
-    },
     fullScreen: {
         flex: 1,
     },
     tile: {
-        borderBottomLeftRadius: 3,
-        borderBottomRightRadius: 3,
         padding: 10,
     },
 });

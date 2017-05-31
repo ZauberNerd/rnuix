@@ -58,7 +58,7 @@ export default class Demo extends Component {
     render() {
         return (
             <ListView
-                style={styles.scene}
+                contentContainerStyle={styles.content}
                 dataSource={this.state.dataSource}
                 enableEmptySections={true}
                 renderRow={this.renderRow}
@@ -68,8 +68,9 @@ export default class Demo extends Component {
 }
 
 const styles = StyleSheet.create({
-    scene: {
+    content: {
         padding: 6,
+        paddingBottom: 0,
     },
     demo: {
         marginBottom: 6,

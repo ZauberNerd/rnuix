@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { ListView, StyleSheet } from 'react-native';
+import { ListView, Platform, StyleSheet } from 'react-native';
 
 import { colors } from '../../../themes';
 import ComponentRow from '../../molecules/component-row';
@@ -31,7 +31,12 @@ export default class ComponentList extends Component {
                 borderless
                 rippleColor="rgba(0, 0, 0, 0.32)"
             >
-                <Icon name="close" />
+                <Icon
+                    name="close"
+                    tintColor={
+                        Platform.OS === 'ios' ? colors.blue : colors.black
+                    }
+                />
             </Touchable>,
     });
     props: Props;

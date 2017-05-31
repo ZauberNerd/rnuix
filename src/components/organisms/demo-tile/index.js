@@ -47,6 +47,7 @@ export default function DemoTile(
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: colors.white,
         borderRadius: 3,
         ...mixins.elevation(2),
     },
