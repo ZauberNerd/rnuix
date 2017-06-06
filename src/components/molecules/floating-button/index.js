@@ -3,10 +3,9 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
 import { colors, mixins } from '../../../themes';
-import Icon from '../../atoms/icon';
-import type { IconProps } from '../../atoms/icon';
+import Icon, { type IconProps } from '../../atoms/icon';
 
-export type FloatingButtonProps = typeof TouchableOpacity & IconProps;
+export type FloatingButtonProps = TouchableOpacity.props & IconProps;
 
 export default function FloatingButton(
     { style, name, tintColor = colors.white, ...props }: FloatingButtonProps,

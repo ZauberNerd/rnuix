@@ -3,11 +3,11 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { colors, mixins } from '../../../themes';
-import DemoRenderer from '../../atoms/demo-renderer';
-import DemoHeader from '../../molecules/demo-header';
+import DemoRenderer, {
+    type DemoRendererProps,
+} from '../../atoms/demo-renderer';
+import DemoHeader, { type DemoHeaderProps } from '../../molecules/demo-header';
 import FloatingButton from '../../molecules/floating-button';
-import type { DemoRendererProps } from '../../atoms/demo-renderer';
-import type { DemoHeaderProps } from '../../molecules/demo-header';
 
 export type DemoTileProps = DemoHeaderProps & DemoRendererProps & {
     onExitFullScreen?: () => void,

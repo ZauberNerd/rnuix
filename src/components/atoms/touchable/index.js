@@ -8,7 +8,7 @@ import {
     View,
 } from 'react-native';
 
-type StyledTouchableNativeFeedbackProps = typeof TouchableNativeFeedback & {
+type StyledTouchableNativeFeedbackProps = TouchableNativeFeedback.props & {
     borderless?: boolean,
     rippleColor?: string,
     style?: StyleSheet.Style,
@@ -35,7 +35,7 @@ function StyledTouchableNativeFeedback(
     );
 }
 
-export type TouchableProps = typeof TouchableOpacity & StyledTouchableNativeFeedbackProps;
+export type TouchableProps = TouchableOpacity.props & StyledTouchableNativeFeedbackProps;
 
 export default function Touchable(
     {
