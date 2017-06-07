@@ -13,7 +13,6 @@ export default {
             render: () => (
                 <FullScreenDemo
                     navigation={{
-                        goBack: () => {},
                         state: {
                             params: {
                                 title: 'title',

@@ -7,13 +7,10 @@ import DemoRenderer, {
     type DemoRendererProps,
 } from '../../atoms/demo-renderer';
 import DemoHeader, { type DemoHeaderProps } from '../../molecules/demo-header';
-import FloatingButton from '../../molecules/floating-button';
 
 export type DemoTileProps = DemoHeaderProps & DemoRendererProps & {
     onExitFullScreen?: () => void,
-    hideHeader?: boolean,
     style?: StyleSheet.Style,
-    exitButtonStyle?: StyleSheet.Style,
 };
 
 export default function DemoTile(
@@ -22,22 +19,14 @@ export default function DemoTile(
         isFullScreen = false,
         hideHeader = false,
         onEnterFullScreen,
-        onExitFullScreen,
         style,
         title,
-        exitButtonStyle,
     }: DemoTileProps,
 ) {
     return (
         <View style={[isFullScreen ? null : styles.container, style]}>
             {isFullScreen
-                ? hideHeader
-                      ? <FloatingButton
-                            onPress={onExitFullScreen}
-                            style={[styles.exitButton, exitButtonStyle]}
-                            name="arrow_back"
-                        />
-                      : null
+                ? null
                 : <DemoHeader
                       onEnterFullScreen={onEnterFullScreen}
                       title={title}
@@ -52,11 +41,5 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white,
         borderRadius: 3,
         ...mixins.elevation(2),
-    },
-    exitButton: {
-        position: 'absolute',
-        bottom: 20,
-        left: 20,
-        zIndex: 1,
     },
 });

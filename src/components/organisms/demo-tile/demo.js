@@ -5,6 +5,10 @@ import { Text, View } from 'react-native';
 import { colors, metrics } from '../../../themes';
 import DemoTile from './';
 
+import { ExitFullScreenFAB } from '../../../';
+
+import type { HeaderProps } from 'react-navigation';
+
 export default {
     displayName: 'DemoTile',
     description: 'Renders a demo.',
@@ -48,11 +52,12 @@ export default {
                     )}
                 />
             ),
-            hideHeader: true,
-            exitButtonStyle: {
-                left: null,
-                right: 20,
-            },
+            renderHeader: (props: HeaderProps) => (
+                <ExitFullScreenFAB
+                    style={{ left: null, right: 20 }}
+                    {...props}
+                />
+            ),
         },
     ],
 };
