@@ -6,7 +6,11 @@ import FloatingButton from '../../molecules/floating-button';
 
 import type { HeaderProps } from 'react-navigation';
 
-export default function ExitFullScreenFAB({ navigation, style }: HeaderProps) {
+export type ExitFullScreenFABProps = HeaderProps;
+
+export default function ExitFullScreenFAB(
+    { navigation, style }: ExitFullScreenFABProps,
+) {
     return (
         <FloatingButton
             onPress={() => navigation.goBack(null)}

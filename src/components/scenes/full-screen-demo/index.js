@@ -28,7 +28,7 @@ export default function FullScreenDemo({ navigation }: Props) {
 
 FullScreenDemo.navigationOptions = props => {
     const { params } = props.navigation.state;
-    if (params.renderHeader) {
+    if (typeof params.renderHeader === 'function') {
         return {
             header: params.renderHeader(props),
         };
