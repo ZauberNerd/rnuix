@@ -43,9 +43,10 @@ export default function Touchable({
     onPress,
     ...props
 }: TouchableProps) {
-    const Touchable = Platform.OS === 'android' && Platform.Version >= 21
-        ? StyledTouchableNativeFeedback
-        : TouchableOpacity;
+    const Touchable =
+        Platform.OS === 'android' && Platform.Version >= 21
+            ? StyledTouchableNativeFeedback
+            : TouchableOpacity;
     const Wrapper = !disabled && (onLongPress || onPress) ? Touchable : View;
 
     return (

@@ -26,19 +26,19 @@ export default class ComponentList extends Component {
         headerBackTitle: null,
         headerLeft:
             screenProps.onExit &&
-                <Touchable
-                    onPress={screenProps.onExit}
-                    style={styles.exitButton}
-                    borderless
-                    rippleColor="rgba(0, 0, 0, 0.32)"
-                >
-                    <Icon
-                        name="close"
-                        tintColor={
-                            Platform.OS === 'ios' ? colors.blue : colors.black
-                        }
-                    />
-                </Touchable>,
+            <Touchable
+                onPress={screenProps.onExit}
+                style={styles.exitButton}
+                borderless
+                rippleColor="rgba(0, 0, 0, 0.32)"
+            >
+                <Icon
+                    name="close"
+                    tintColor={
+                        Platform.OS === 'ios' ? colors.blue : colors.black
+                    }
+                />
+            </Touchable>,
     });
     props: Props;
 

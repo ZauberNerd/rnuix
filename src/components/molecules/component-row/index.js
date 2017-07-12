@@ -20,8 +20,12 @@ export default function ComponentRow({
 }: ComponentRowProps) {
     return (
         <Touchable onPress={onPress} style={[styles.row, style]}>
-            <Text style={styles.displayName}>{title}</Text>
-            <Text style={styles.description}>{description}</Text>
+            <Text style={styles.displayName}>
+                {title}
+            </Text>
+            <Text style={styles.description}>
+                {description}
+            </Text>
         </Touchable>
     );
 }

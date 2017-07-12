@@ -3,7 +3,9 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { colors, mixins } from '../../../themes';
-import DemoRenderer, { type DemoRendererProps } from '../../atoms/demo-renderer';
+import DemoRenderer, {
+    type DemoRendererProps,
+} from '../../atoms/demo-renderer';
 import DemoHeader, { type DemoHeaderProps } from '../../molecules/demo-header';
 
 export type DemoTileProps = DemoHeaderProps &

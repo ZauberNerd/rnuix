@@ -18,7 +18,9 @@ export default function DemoHeader({
     return (
         <View style={styles.header}>
             <View style={styles.title}>
-                <Text style={styles.titleText}>{title}</Text>
+                <Text style={styles.titleText}>
+                    {title}
+                </Text>
             </View>
             <View style={styles.buttons}>
                 <Touchable style={styles.button} onPress={onEnterFullScreen}>

@@ -19,7 +19,10 @@ export default {
         },
         {
             title: 'No onPress disables feedback',
-            render: () => <Touchable><Text>Can't touch this</Text></Touchable>,
+            render: () =>
+                <Touchable>
+                    <Text>Can't touch this</Text>
+                </Touchable>,
         },
         {
             title: 'Custom style',
@@ -30,9 +33,7 @@ export default {
                     rippleColor="#fff6"
                     style={styles.customWrapper}
                 >
-                    <Text style={styles.customText}>
-                        Touch me!
-                    </Text>
+                    <Text style={styles.customText}>Touch me!</Text>
                 </Touchable>,
         },
         {
@@ -43,9 +44,7 @@ export default {
                     onPress={() => {}}
                     style={styles.customWrapper}
                 >
-                    <Text style={styles.customText}>
-                        Can't touch this
-                    </Text>
+                    <Text style={styles.customText}>Can't touch this</Text>
                 </Touchable>,
         },
     ],
