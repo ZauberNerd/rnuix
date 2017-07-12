@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import type { StyleObj } from 'StyleSheetTypes';
 
 import { colors, mixins } from '../../../themes';
 import DemoRenderer, {
@@ -10,8 +11,9 @@ import DemoHeader, { type DemoHeaderProps } from '../../molecules/demo-header';
 
 export type DemoTileProps = DemoHeaderProps &
     DemoRendererProps & {
+        hideHeader?: boolean,
         onExitFullScreen?: () => void,
-        style?: StyleSheet.Style,
+        style?: StyleObj,
     };
 
 export default function DemoTile({

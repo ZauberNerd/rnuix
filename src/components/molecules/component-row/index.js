@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
+import type { StyleObj } from 'StyleSheetTypes';
 
 import { colors } from '../../../themes';
 import Touchable from '../../atoms/touchable';
@@ -9,7 +10,7 @@ export type ComponentRowProps = {
     title: string,
     description?: string,
     onPress?: () => void,
-    style?: StyleSheet.Style,
+    style?: StyleObj,
 };
 
 export default function ComponentRow({

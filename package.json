@@ -1,6 +1,6 @@
 {
 	"name": "rnuix",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"main": "./src/index.js",
 	"bin": "./bin/rnuix",
 	"scripts": {
@@ -20,20 +20,20 @@
 		"react-navigation": "1.0.0-beta.11"
 	},
 	"peerDependencies": {
-		"react": ">=15.4.0-rc.4 <= 15.4.2",
-		"react-native": ">=0.39.0 <= 0.42.3"
+		"react": ">=15.4.0-rc.4 <= 16.0.0",
+		"react-native": ">=0.39.0 <= 0.46.2"
 	},
 	"devDependencies": {
 		"babel-jest": "20.0.3",
 		"babel-plugin-transform-flow-strip-types": "6.22.0",
 		"babel-preset-react-native": "2.1.0",
-		"flow-bin": "0.39.0",
+		"flow-bin": "0.46.0",
 		"husky": "0.14.3",
 		"jest": "20.0.4",
 		"prettier": "1.5.2",
-		"react": "15.4.2",
-		"react-native": "0.42.3",
-		"react-test-renderer": "15.4.2"
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.46.2",
+		"react-test-renderer": "16.0.0-alpha.12"
 	},
 	"jest": {
 		"preset": "react-native"

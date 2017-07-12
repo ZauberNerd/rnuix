@@ -7,11 +7,12 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import type { StyleObj } from 'StyleSheetTypes';
 
 type StyledTouchableNativeFeedbackProps = TouchableNativeFeedback.props & {
     borderless?: boolean,
     rippleColor?: string,
-    style?: StyleSheet.Style,
+    style?: StyleObj,
 };
 
 function StyledTouchableNativeFeedback({
