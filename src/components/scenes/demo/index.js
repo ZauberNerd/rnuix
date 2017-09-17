@@ -50,6 +50,7 @@ export default class Demo extends PureComponent {
             style={styles.demo}
             title={props.title}
             render={props.render}
+            navigation={this.props.navigation}
             onEnterFullScreen={() =>
                 this.props.navigation.navigate('fullScreen', props)}
         />;

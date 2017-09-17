@@ -16,7 +16,11 @@ export default {
         {
             title: 'Normal mode',
             render: () =>
-                <DemoTile title="title" render={() => <Text>Content</Text>} />,
+                <DemoTile
+                    title="title"
+                    render={() => <Text>Content</Text>}
+                    navigation={{}}
+                />,
         },
         {
             title: 'Full screen mode',
@@ -26,6 +30,7 @@ export default {
                     isFullScreen
                     style={{ height: 50 }}
                     render={() => <Text>Content</Text>}
+                    navigation={{}}
                 />,
         },
         {
@@ -47,6 +52,7 @@ export default {
                         >
                             <Text>Large content</Text>
                         </View>}
+                    navigation={{}}
                 />,
             renderHeader: (props: HeaderProps) =>
                 <ExitFullScreenFAB

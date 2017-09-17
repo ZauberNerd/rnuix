@@ -7,18 +7,20 @@ import { colors } from '../../../themes';
 export type DemoRendererProps = {
     isFullScreen?: boolean,
     render: () => React.Element<*>,
+    navigation: Object,
 };
 
 export default function DemoRenderer({
     isFullScreen,
     render,
+    navigation,
 }: DemoRendererProps) {
     return (
         <ScrollView
             style={isFullScreen && styles.fullScreen}
             contentContainerStyle={!isFullScreen && styles.tile}
         >
-            {render()}
+            {render({ navigation })}
         </ScrollView>
     );
 }

@@ -21,6 +21,7 @@ export default function FullScreenDemo({ navigation }: Props) {
             style={styles.demo}
             title={props.title}
             render={props.render}
+            navigation={navigation}
             isFullScreen
         />
     );

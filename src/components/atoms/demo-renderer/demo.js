@@ -10,7 +10,11 @@ export default {
     demos: [
         {
             title: 'Normal mode',
-            render: () => <DemoRenderer render={() => <Text>Content</Text>} />,
+            render: () =>
+                <DemoRenderer
+                    render={() => <Text>Content</Text>}
+                    navigation={{}}
+                />,
         },
         {
             title: 'Full screen mode',
@@ -18,6 +22,7 @@ export default {
                 <DemoRenderer
                     isFullScreen
                     render={() => <Text>Content</Text>}
+                    navigation={{}}
                 />,
         },
     ],
